@@ -1,0 +1,18 @@
+.container {
+	padding: 2rem 0;
+}
+
+.cm-iri-ref {
+	color: #085;
+}
+
+.cm-atom-2 {
+	color: #f50;
+}
+
+.CodeMirror {
+	white-space: nowrap;
+	height: 600px;
+	font-size: 24px;
+	line-height: 30px;
+}
