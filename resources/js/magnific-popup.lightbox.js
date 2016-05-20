@@ -1,4 +1,4 @@
-$('.mfp-lightbox .columns').magnificPopup({
+$('.mfp-lightbox').magnificPopup({
 	delegate: 'a', // child items selector, by clicking on it popup will open
 	type: 'image',
 	mainClass: 'mfp-with-zoom', // this class is for CSS animation below
