@@ -1,4 +1,4 @@
-### Date | Place
+### Date | Event  | Place
 
 # Title
 
