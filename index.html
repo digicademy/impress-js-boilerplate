@@ -4,7 +4,7 @@
     <title>TITLE</title>
 
     <!-- meta information -->
-    <meta name="author" content="AUTHOR" />
+    <meta name="author" content="Torsten Schrade" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=1024" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -20,23 +20,33 @@
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,600italic,400italic,700italic,800,800italic&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css" />
 
-    <!-- presentation styles -->
-    <link href="resources/css/style.css" rel="stylesheet" />
+    <!-- styles for included libraries -->
 
-    <!-- other libraries -->
-
-    <!-- chartist.js -->
+    <!-- chartist -->
     <link rel="stylesheet" href="vendor/chartist/chartist.min-0.9.7.css" />
 
     <!-- codemirror -->
     <link rel="stylesheet" href="vendor/codemirror/lib/codemirror.css" />
-    <link rel="stylesheet" href="resources/css/codemirror-sparql.css" />
 
-    <!-- highlight.js -->
+    <!-- highlight -->
     <link rel="stylesheet" href="vendor/highlight/styles/default.css" />
+    <link rel="stylesheet" href="resources/css/hljs.linenumbering.css" />
 
     <!-- magnific popup -->
     <link rel="stylesheet" href="vendor/magnific-popup/magnific-popup-1.1.0.css" />
+
+    <!-- standard presentation styles -->
+    <link href="resources/css/style.css" rel="stylesheet" />
+
+    <!-- custom presentation styles -->
+    <link href="resources/css/custom.css" rel="stylesheet" />
+
+    <!-- js needed in head -->
+
+    <!-- greuler -->
+    <script src="vendor/d3/d3-3.5.6.js"></script>
+    <script src="vendor/cola/cola.v3.min.js"></script>
+    <script src="vendor/greuler/greuler-0.5.5.min.js"></script>
 
     <!-- html5 dataset shim for IE -->
     <script src="vendor/impress/html5-dataset.js" type="text/javascript"></script>
@@ -58,24 +68,33 @@
     <div id="impress">
 
         <div class="step">
-            <h4>Date | Location</h4>
+            <h4><strong>Date</strong> | <a href="#">Location</a></h4>
+            <h4><strong>Context</strong></h4>
 
-            <h1>TITLE</h1>
+            <h1 class="down-100">Title</h1>
 
-            <h2 class="red">Subtitle</h2>
+            <h2 class="red up-25">Subtitle</h2>
 
-            <h5 class="byline">
-                <strong>Author | Download:
-                    <a href="#" title="Download the presentation">
-                        Link
-                    </a>
-                </strong>
+            <h4 class="down-100">
+                <strong>Slides:</strong>
+                <a href="#" title="View the presentation online">
+                    Link
+                </a>
+            </h4>
+
+            <h5>
+                <strong><a href="#">Author(s)</a></strong> |
+                <img src="resources/img/Twitter_bird_logo_2012.svg" alt="Twitter" class="twitter-icon" />
+                <a href="https://twitter.com/digicademy" title="Digital Academy on Twitter">@digicademy</a> |
+                <img src="resources/img/Octicons-mark-github.svg" alt="Twitter" class="gh-icon" />
+                <a href="https://github.com/digicademy/" title="Digital Academy on GitHub">digicademy</a> |
+                <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>
             </h5>
         </div>
 
         <div class="step">
             <h2>Table of Contents</h2>
-            <ol>
+            <ol class="line-height-one-five">
                 <li>
                     One
                 </li>
@@ -91,20 +110,340 @@
         <div class="step">
             <h1 class="red">01</h1>
             <h2 class="line-height-one-five">
-                Chapter
+                Basics
             </h2>
         </div>
 
         <div class="step">
-            <h2>Title</h2>
+            <h1>Heading (H1)</h1>
+            <h2>Heading (H2)</h2>
+            <h3>Heading (H3)</h3>
+            <h4>Heading (H4)</h4>
+            <h5>Heading (H5)</h5>
+            <h6>Heading (H6)</h6>
+        </div>
+
+        <div class="step">
+            <h2>Text</h2>
+            <h3 class="red up-25 after-25">Standard text styles</h3>
+            <p class="justify">
+               To die or fly to <span class="dotted">dream</span>: ay, <em>that makes calamity of office</em>, and to be: to dread of, and the heart-ache<sup>1</sup>
+               and sweat pith their <span class="outline">currents</span> turns, puzzles <code>the pale cast of outrageous</code> for who would bear, <strong>to be
+               or to sleep</strong> of <del>death</del> <ins>life</ins> what pith and sweat pith <span class="underline">the pangs and arrows</span> of dispriz'd lose ills
+               we have shuffled o'er with a <span class="highlight">bare</span> bourn no <a href="https://en.wikipedia.org/wiki/Mortal_coil">mortal coil</a>. <cite>W.S., Volume<sub>2</sub></cite>
+            </p>
+            <blockquote>
+                Beware the Jabberwock, my son!
+                The jaws that bite, the claws that catch!
+                Beware the Jubjub bird, and shun
+                The frumious Bandersnatch!
+            </blockquote>
+        </div>
+
+        <div class="step">
+            <h2>Text</h2>
+            <h3 class="red up-25 after-25">Text classes (medium, small, x-small)</h3>
+            <h4><strong>medium</strong></h4>
+            <p class="medium up-25">
+               To die or fly to <span class="dotted">dream</span>: ay, <em>that makes calamity of office</em>, and to be: to dread of, and the heart-ache<sup>1</sup>
+               and sweat pith their <span class="outline">currents</span> turns, puzzles <code>the pale cast of outrageous</code> for who would bear, <strong>to be
+               or to sleep</strong> of <del>death</del> <ins>life</ins> what pith and sweat pith <span class="underline">the pangs and arrows</span> of dispriz'd lose ills
+               we have shuffled o'er with a <span class="highlight">bare</span> bourn no <a href="https://en.wikipedia.org/wiki/Mortal_coil">mortal coil</a>. <cite>W.S., Volume<sub>2</sub></cite>
+            </p>
+            <h5><strong>small</strong></h5>
+            <p class="small up-25">
+               To die or fly to <span class="dotted">dream</span>: ay, <em>that makes calamity of office</em>, and to be: to dread of, and the heart-ache<sup>1</sup>
+               and sweat pith their <span class="outline">currents</span> turns, puzzles <code>the pale cast of outrageous</code> for who would bear, <strong>to be
+               or to sleep</strong> of <del>death</del> <ins>life</ins> what pith and sweat pith <span class="underline">the pangs and arrows</span> of dispriz'd lose ills
+               we have shuffled o'er with a <span class="highlight">bare</span> bourn no <a href="https://en.wikipedia.org/wiki/Mortal_coil">mortal coil</a>. <cite>W.S., Volume<sub>2</sub></cite>
+            </p>
+            <h6><strong>x-small</strong></h6>
+            <p class="x-small up-25">
+               To die or fly to <span class="dotted">dream</span>: ay, <em>that makes calamity of office</em>, and to be: to dread of, and the heart-ache<sup>1</sup>
+               and sweat pith their <span class="outline">currents</span> turns, puzzles <code>the pale cast of outrageous</code> for who would bear, <strong>to be
+               or to sleep</strong> of <del>death</del> <ins>life</ins> what pith and sweat pith <span class="underline">the pangs and arrows</span> of dispriz'd lose ills
+               we have shuffled o'er with a <span class="highlight">bare</span> bourn no <a href="https://en.wikipedia.org/wiki/Mortal_coil">mortal coil</a>. <cite>W.S., Volume<sub>2</sub></cite>
+            </p>
+        </div>
+
+        <div class="step">
+            <h2>Lists, Lists, Lists</h2>
+            <h3 class="red up-25 after-25">Definition, unordered, ordered</h3>
             <div class="row">
-                <div class="six columns">
-                    <h3>Left six columns</h3>
+                <div class="four columns">
+                    <dl>
+                        <dt>
+                            Acceleration
+                        </dt>
+                        <dd>
+                            A constant force, acting on a particle of mass m, will produce a constant acceleration a
+                        </dd>
+                        <dt>
+                            Energy
+                        </dt>
+                        <dd>
+                            If we represent kinetic energy by the symbol K, then K = ½ m v²
+                        </dd>
+                    </dl>
                 </div>
-                <div class="six columns">
-                    <h3>Right six columns</h3>
+                <div class="four columns">
+                    <h3>Medium</h3>
+                    <ul>
+                        <li>One</li>
+                        <li>Two
+                            <ul>
+                                <li>Two.One</li>
+                                <li>Two.Two</li>
+                            </ul>
+                        </li>
+                        <li>Three</li>
+                    </ul>
+                    <h4>Small</h4>
+                    <ul class="small">
+                        <li>One</li>
+                        <li>Two
+                            <ul>
+                                <li>Two.One</li>
+                                <li>Two.Two</li>
+                            </ul>
+                        </li>
+                        <li>Three</li>
+                    </ul>
+                </div>
+                <div class="four columns">
+                    <h3>Medium</h3>
+                    <ol>
+                        <li>One</li>
+                        <li>Two
+                            <ul>
+                                <li>Two.One</li>
+                                <li>Two.Two</li>
+                            </ul>
+                        </li>
+                        <li>Thre</li>
+                    </ol>
+                    <h4>Small</h4>
+                    <ol class="small">
+                        <li>One</li>
+                        <li>Two
+                            <ul>
+                                <li>Two.One</li>
+                                <li>Two.Two</li>
+                            </ul>
+                        </li>
+                        <li>Thre</li>
+                    </ol>
                 </div>
             </div>
+        </div>
+
+        <div class="step">
+            <h2>Tables</h2>
+            <h3 class="red up-25 after-50">Table styles</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>One</th>
+                        <th>Two</th>
+                        <th>Three</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Four</td>
+                        <td>Five</td>
+                        <td>Six</td>
+                    </tr>
+                    <tr>
+                        <td>Seven</td>
+                        <td>Eight</td>
+                        <td>Nine</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="step">
+            <h1 class="red">02</h1>
+            <h2 class="line-height-one-five">
+                Advanced
+            </h2>
+        </div>
+
+        <div class="step">
+            <h2>Slide structure</h2>
+            <h3 class="red up-25 after-50">Twelfe column grid with skeleton.css</h3>
+            <div class="example-grid">
+                <div class="row">
+                    <div class="one column">One</div>
+                    <div class="eleven columns">Eleven</div>
+                </div>
+                <div class="row">
+                    <div class="two columns">Two</div>
+                    <div class="ten columns">Ten</div>
+                </div>
+                <div class="row">
+                    <div class="three columns">Three</div>
+                    <div class="nine columns">Nine</div>
+                </div>
+                <div class="row">
+                    <div class="four columns">Four</div>
+                    <div class="eight columns">Eight</div>
+                </div>
+                <div class="row">
+                    <div class="five columns">Five</div>
+                    <div class="seven columns">Seven</div>
+                </div>
+                <div class="row">
+                    <div class="six columns">Six</div>
+                    <div class="six columns">Six</div>
+                </div>
+                <div class="row">
+                    <div class="seven columns">Seven</div>
+                    <div class="five columns">Five</div>
+                </div>
+                <div class="row">
+                    <div class="eight columns">Eight</div>
+                    <div class="four  columns">Four</div>
+                </div>
+                <div class="row">
+                    <div class="nine columns">Nine</div>
+                    <div class="three columns">Three</div>
+                </div>
+                <div class="row">
+                    <div class="ten columns">Ten</div>
+                    <div class="two columns">Two</div>
+                </div>
+                <div class="row">
+                    <div class="eleven columns">Eleven</div>
+                    <div class="one column">One</div>
+                </div>
+            </div>
+            <p class="down-25">
+                Website: <a href="http://getskeleton.com/">http://getskeleton.com/</a>
+            </p>
+        </div>
+
+        <div class="step">
+            <h2>Substeps</h2>
+            <h3 class="red up-25 after-50">Triggered with class "substep"</h3>
+            <ul class="line-height-one-five">
+                <li class="substep">One</li>
+                <li class="substep">Two</li>
+                <li class="substep">Three</li>
+                <li class="substep">Four</li>
+                <li class="substep">Five</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2>Responsive images</h2>
+            <h3 class="red up-25 after-50">With magnific popup</h3>
+            <div class="mfp-lightbox row">
+                <div class="three columns">
+                    <a href="resources/img/1024x768.png">
+                        <img src="resources/img/1024x768.png" />
+                    </a>
+                </div>
+                <div class="four columns">
+                    <a href="resources/img/1024x768.png">
+                        <img src="resources/img/1024x768.png" />
+                    </a>
+                </div>
+                <div class="five columns">
+                    <a href="resources/img/1024x768.png">
+                        <img src="resources/img/1024x768.png" />
+                    </a>
+                </div>
+            </div>
+            <p class="down-50">
+                Website: <a href="http://dimsemenov.com/plugins/magnific-popup/">http://dimsemenov.com/plugins/magnific-popup/</a>
+            </p>
+        </div>
+
+        <div class="step">
+            <h2>Code listings</h2>
+            <h3 class="red up-25 after-50">With highlight.js (support for most languages)</h3>
+<pre>
+<code class="linenumbers js">function $initHighlight(block, cls) {
+  try {
+    if (cls.search(/\bno\-highlight\b/) != -1)
+      return process(block, true, 0x0F) +
+             ` class="${cls}"`;
+  } catch (e) {
+    /* handle exception */
+  }
+  for (var i = 0 / 2; i < classes.length; i++) {
+    if (checkCondition(classes[i]) === undefined)
+      console.log('undefined');
+  }
+}
+
+export  $initHighlight;
+</code>
+</pre>
+        <p>
+             Website:  <a href="https://highlightjs.org/">https://highlightjs.org/</a>
+        </p>
+        </div>
+
+        <div class="step">
+            <h2>Alternative code listing</h2>
+            <h3 class="red up-25 after-25">With Codemirror (support for even more languages)</h3>
+<form><textarea id="sparql" name="sparql">
+PREFIX rel: &lt;http://purl.org/vocab/relationship/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+
+SELECT DISTINCT ?subject ?subjectLabel ?object ?objectLabel ?predicate
+WHERE {
+    ?subject ?predicate ?object .
+    ?subject (rel:parentOf|^rel:parentOf|rel:spouseOf) ?object .
+    ?subject rdfs:label ?subjectLabel .
+    ?object rdfs:label ?objectLabel .
+    ?subject foaf:gender ?subjectGender .
+    ?object foaf:gender ?objectGender .
+    BIND (IF(?subjectGender = "male"@en, "gold", "yellowgreen") AS ?sourceColor)
+    BIND (IF(?objectGender = "male"@en, "gold", "yellowgreen") AS ?targetColor)
+}
+</textarea></form>
+        <p>
+             Website:  <a href="https://codemirror.net/">https://codemirror.net/</a>
+        </p>
+        </div>
+
+        <div class="step">
+            <h2>Charts</h2>
+            <h3 class="red up-25 after-50">With chartist.js</h3>
+            <div class="ct-container">
+                <div class="ct-chart ct-major-twelfth project-count"></div>
+            </div>
+            <p class="down-25">
+                 Website: <a href="https://gionkunz.github.io/chartist-js/">https://gionkunz.github.io/chartist-js/</a>
+            </p>
+        </div>
+
+        <div class="step">
+            <h2>Graph models</h2>
+            <h3 class="red up-25 after-25">With greuler.js</h3>
+            <div id="greuler"></div>
+            <script>
+                'use strict';
+                greuler({
+                  target: '#greuler',
+                  width: 480,
+                  height: 300,
+                  data: greuler.Graph.random({
+                    order: 5,
+                    size: 5,
+                    connected: true
+                  })
+                }).update()
+            </script>
+            <p class="down-75">
+                 Website: <a href="https://maurizzzio.github.io/greuler/#/">https://maurizzzio.github.io/greuler/#/</a>
+            </p>
         </div>
 
         <div class="step">
@@ -120,7 +459,7 @@
 
             <h4>Literature</h4>
 
-            <ul class="small pull-up">
+            <ul class="small">
                 <li>
                     One
                 </li>
@@ -134,7 +473,7 @@
 
             <h4>Software</h4>
 
-            <ul class="small pull-up">
+            <ul class="small">
                 <li>
                     One
                 </li>
@@ -147,7 +486,7 @@
             </ul>
 
             <h4>Download</h4>
-            <ul class="small pull-up">
+            <ul class="small">
                 <li>
                     <a href="#">
                         Link to presentation
@@ -161,30 +500,34 @@
 
     </div>
 
+    <!-- jquery -->
+    <script src="vendor/jquery/jquery-1.11.0.min.js"></script>
+
     <!-- chartist -->
     <script src="vendor/chartist/chartist.min-0.9.7.js"></script>
+    <script src="resources/js/chartist.charts.js"></script>
 
     <!-- codemirror -->
     <script src="vendor/codemirror/lib/codemirror.js"></script>
+    <script src="vendor/codemirror/addon/edit/matchbrackets.js"></script>
     <script src="vendor/codemirror/mode/sparql/sparql.js"></script>
-
-    <!-- greuler -->
-    <script src="vendor/d3/d3-3.5.6.js"></script>
-    <script src="vendor/cola/cola.v3.min.js"></script>
-    <script src="vendor/greuler/greuler-0.5.5.min.js"></script>
+    <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById("sparql"), {
+            mode: "application/sparql-query",
+            matchBrackets: true,
+            lineNumbers: true,
+            viewportMargin: Infinity
+        });
+    </script>
 
     <!-- highlight -->
     <script src="vendor/highlight/highlight.pack-9.3.0.js"></script>
-
-    <!-- jquery -->
-    <script src="vendor/jquery/jquery-1.11.0.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="resources/js/hljs.linenumbering.js"></script>
 
     <!-- magnific popup -->
     <script src="vendor/magnific-popup/jquery.magnific-popup.min-1.1.0.js"></script>
     <script src="resources/js/magnific-popup.lightbox.js"></script>
-
-    <!-- sgvizler -->
-    <script src="vendor/sgvizler/sgvizler.fork.js"></script>
 
     <!-- impress.mod.js -->
     <script src="vendor/impress/impress.fork.js"></script>

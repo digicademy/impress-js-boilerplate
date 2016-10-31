@@ -59,9 +59,9 @@ body {
 	width: 780px;
 	padding: 10px 10px 0;
 	margin: 20px auto;
-	border: 1px solid #E4C652;
+	border: 1px solid #e1e1e1;
 	border-radius: 10px;
-	background: #EEDC94;
+	background: #f1f1f1;
 }
 
 .fallback-message p {
@@ -99,43 +99,43 @@ body {
 /* SCALING, POSITIONING, POINTER EVENTS FOR CURRENT SLIDE */
 
 .present .positioning {
-	-webkit-transform: translateY(-10px);
-	-moz-transform: translateY(-10px);
-	-ms-transform: translateY(-10px);
-	-o-transform: translateY(-10px);
+		-webkit-transform: translateY(-10px);
+		-moz-transform: translateY(-10px);
+		-ms-transform: translateY(-10px);
+		-o-transform: translateY(-10px);
 	transform: translateY(-10px);
 }
 
 .present .rotating {
-	-webkit-transform: rotate(-10deg);
-	-moz-transform: rotate(-10deg);
-	-ms-transform: rotate(-10deg);
-	-o-transform: rotate(-10deg);
+		-webkit-transform: rotate(-10deg);
+		-moz-transform: rotate(-10deg);
+		-ms-transform: rotate(-10deg);
+		-o-transform: rotate(-10deg);
 	transform: rotate(-10deg);
-	-webkit-transition-delay: 0.25s;
-	-moz-transition-delay: 0.25s;
-	-ms-transition-delay: 0.25s;
-	-o-transition-delay: 0.25s;
+		-webkit-transition-delay: 0.25s;
+		-moz-transition-delay: 0.25s;
+		-ms-transition-delay: 0.25s;
+		-o-transition-delay: 0.25s;
 	transition-delay: 0.25s;
 }
 
 .present .scaling {
-	-webkit-transform: scale(0.7);
-	-moz-transform: scale(0.7);
-	-ms-transform: scale(0.7);
-	-o-transform: scale(0.7);
+		-webkit-transform: scale(0.7);
+		-moz-transform: scale(0.7);
+		-ms-transform: scale(0.7);
+		-o-transform: scale(0.7);
 	transform: scale(0.7);
-	-webkit-transition-delay: 0.5s;
-	-moz-transition-delay: 0.5s;
-	-ms-transition-delay: 0.5s;
-	-o-transition-delay: 0.5s;
+		-webkit-transition-delay: 0.5s;
+		-moz-transition-delay: 0.5s;
+		-ms-transition-delay: 0.5s;
+		-o-transition-delay: 0.5s;
 	transition-delay: 0.5s;
 }
 
 /* ENABLE POINTER EVENTS ON SPECIAL ELEMENTS */
 
 .present a,
-.prsent a:hover,
+.present a:hover,
 .present svg,
 .present svg:hover,
 .present object,
@@ -144,9 +144,8 @@ body {
 .present iframe:hover,
 .present .ct-container,
 .present .ct-container:hover,
-.present .swiper-container,
-.present .swiper-container:hover,
-button.mfp-close {
+.present .hljs,
+.mfp-close {
 	pointer-events: auto;
 }
 
@@ -156,108 +155,33 @@ BASIC TYPOGRAPHY
 #########################################################
 */
 
-h1, h2 {
-	font-weight: normal;
-}
-
 h1 {
 	font-size: 100px;
-	margin: 20px 0;
-	line-height: 110px;
 }
 
 h2 {
 	font-size: 48px;
-	font-weight: 300;
-	letter-spacing: .1em;
+	letter-spacing: 0.1em;
 	text-transform: uppercase;
-	line-height: 1.1;
-	margin: 10px 0;
 }
 
-blockquote {
-	font-weight: 300;
-	font-style: italic;
-	line-height: 1.4;
-	margin: 20px 0 30px 0;
-	padding: 10px 0;
-	border-top: 1px solid #aaa;
-	border-bottom: 1px solid #aaa;
+h6 {
+	font-size: 18px;
 }
 
-table {
-	width: 100%;
-}
-
-td, th {
-	vertical-align: top;
-	line-height: 44px;
-}
-
-code {
-	font-size: 36px;
-	line-height: 36px;
+p {
+	line-height: 1.5;
 }
 
 a {
 	pointer-events: none;
 	text-decoration: none;
 	color: #1e88e5;
-	-webkit-transition: 0.5s;
-	-moz-transition: 0.5s;
-	-ms-transition: 0.5s;
-	-o-transition: 0.5s;
-	transition: 0.5s;
 	font-weight: bold;
 }
 
-p {
-	font-size: 16px;
-	line-height: 2;
-}
-
-ol {
-	margin: 20px 0 20px 70px;
-}
-
-ul {
-	counter-reset: section;
-	margin: 20px 0 20px 50px;
-}
-
-li {
-	position: relative;
-	list-style-type: none;
-	counter-increment: section;
-	font-size: 26px;
-	line-height: 36px;
-}
-
-li:before {
-	position: absolute;
-	left: -35px;
-	top: 4px;
-	line-height: 1;
-	color: #C00000;
-}
-
-ul li:before {
-	left: -25px;
-	font-size: 20px;
-	content: "▸"
-}
-
-ol li:before {
-	content: counters(section,".")". ";
-}
-
-span, strong {
-	-webkit-transition: 0.5s;
-	-moz-transition: 0.5s;
-	-ms-transition: 0.5s;
-	-o-transition: 0.5s;
-	transition: 0.5s;
-	display: inline-block;
+a:link, a:hover, a:focus, a:visited {
+	color: #1e88e5;
 }
 
 strong {
@@ -280,7 +204,77 @@ sup {
 }
 
 sub {
-	bottom: -0.25em;
+	bottom: -0.5em;
+}
+
+ol, ul {
+	margin: 0 0 20px 40px;
+	line-height: 1;
+}
+
+ul {
+	counter-reset: section;
+}
+
+li {
+	position: relative;
+	list-style-type: none;
+	counter-increment: section;
+}
+
+li:before {
+	color: #C00000;
+}
+
+ul li:before {
+	content: "▸";
+	margin-right: 0.5em;
+}
+
+ol li:before {
+	content: counters(section,".")".";
+	margin-right: 0.5em;
+}
+
+dl {
+	margin: 0;
+	padding: 0;
+}
+
+dt {
+	font-weight: 800;
+	margin-bottom: 0.3em;
+}
+
+dd + dt {
+	margin-top: 0.5em;
+}
+
+blockquote {
+	font-style: italic;
+	line-height: 1.5;
+	margin: 0;
+	padding: 10px 10px 16px 10px;
+	border-top: 1px solid #aaa;
+	border-bottom: 1px solid #aaa;
+}
+
+table {
+	width: 100%;
+}
+
+td, th {
+	vertical-align: top;
+}
+
+/*
+#########################################################
+IMAGES
+#########################################################
+*/
+
+img {
+	width: 100%;
 }
 
 /*
@@ -299,77 +293,108 @@ CLASSES FOR SPECIAL LAYOUT/TYPOGRAPHY
 
 .justify {
 	text-align: justify;
-	-webkit-hyphens: auto;
-	-moz-hyphens: auto;
-	-ms-hyphens: auto;
+		-webkit-hyphens: auto;
+		-moz-hyphens: auto;
+		-ms-hyphens: auto;
 	hyphens: auto;
 }
 
-.medium, .medium li {
-	font-size: 20px;
-}
-
-.medium li:before {
-	top: 3px;
-}
-
-.medium li {
-	line-height: 1.4;
+.medium {
+	font-size: 26px;
 }
 
 .small {
-	font-size: 16px;
+	font-size: 22px;
 }
 
-.small li {
+.x-small {
 	font-size: 18px;
-	line-height: 1.3;
-}
-
-.small li:before {
-	top: 0;
 }
 
 .skip {
 	display: none;
 }
 
-.byline {
-	margin-top: 1em;
-	font-size: 30px;
-}
-
 .underline {
-	border-bottom: 1px dotted;
+	border-bottom: 1px solid #333;
 }
 
 .dotted {
-	border: 1px dotted #333;
+	border-bottom: 1px dotted #333;
 }
 
 .red {
 	color: #C00000;
 }
 
-.teaser {
-	min-height: 134px;
-}
-
 .outline {
 	outline: 1px solid #333;
+	padding-left: 0.2em;
+	padding-right: 0.2em;
 }
 
-.light {
-	font-weight: 300;
-	letter-spacing: .1em;
+.up-25 {
+	margin-top: -25px;
 }
 
-.pull-up {
-	margin-top: -10px;
+.up-50 {
+	margin-top: -50px;
 }
 
-.push-down {
-	margin-top: 10px;
+.up-75 {
+	margin-top: -75px;
+}
+
+.up-100 {
+	margin-top: -100px;
+}
+
+.down-25, .before-25 {
+	margin-top: 25px;
+}
+
+.down-50, .before-50 {
+	margin-top: 50px;
+}
+
+.down-75, .before-75 {
+	margin-top: 75px;
+}
+
+.down-100, .before-100 {
+	margin-top: 100px;
+}
+
+.after-25 {
+	margin-bottom: 25px;
+}
+
+.after-50 {
+	margin-bottom: 50px;
+}
+
+.after-75 {
+	margin-bottom: 75px;
+}
+
+.after-100 {
+	margin-bottom: 100px;
+}
+
+.pull-25 {
+	margin-bottom: -25px;
+}
+
+.pull-50 {
+	margin-bottom: -50px;
+}
+
+.pull-75 {
+	margin-bottom: -75px;
+}
+
+.pull-75 {
+	margin-bottom: -100px;
 }
 
 .even-left {
@@ -389,11 +414,23 @@ CLASSES FOR SPECIAL LAYOUT/TYPOGRAPHY
 }
 
 .line-height-two {
-	line-height: 1.5;
+	line-height: 2;
 }
 
 .no-margins {
 	margin: 0;
+}
+
+.highlight {
+	background: #FFEF00;
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+}
+
+.gh-icon, .twitter-icon {
+	position: relative;
+	top: 5px; width:
+	30px;
 }
 
 /*
@@ -402,9 +439,111 @@ STYLES FOR INCLUDED LIBRARIES
 #########################################################
 */
 
+/* HIGHLIGHT.JS */
 
-/*
-#########################################################
-STYLES FOR SPECIFIC SLIDES
-#########################################################
-*/
+pre code {
+	background-color: inherit;
+	padding: 0 2em;
+}
+
+code {
+	font-family: monospace;
+}
+
+code.hljs {
+	font-size: 20px;
+	line-height: 24px;
+	padding-left: 1em;
+}
+
+.hljs + .numbering {
+	padding: 10px 6px;
+	background: #f7f7f7;
+}
+
+.hljs + ul.numbering li {
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.hljs + ul li::before {
+	margin-right: 0;
+}
+
+/* CODEMIRROR */
+
+.CodeMirror {
+	background: #f1f1f1 none repeat scroll 0 0;
+	border: 1px solid #e1e1e1;
+	border-radius: 4px;
+	display: block;
+	font-size: 18px;
+	line-height: 26px;
+	margin: 0 0.2rem;
+	white-space: nowrap;
+	height: auto;
+}
+
+.CodeMirror-linenumber {
+	color: #333;
+}
+
+.cm-iri-ref {
+	color: #085;
+}
+
+.cm-atom-2 {
+	color: #f50;
+}
+
+/* SPARQL color classes */
+
+.subject-background {
+	background: #81d4fa;
+}
+
+.predicate-background {
+	background: #ff8a65;
+}
+
+.object-background {
+	background: #a5d6a7;
+}
+
+.subject-color, .subject:before {
+	color: #0277bd;
+}
+
+.predicate-color, .predicate:before {
+	color: #ff6d00;
+}
+
+.object-color, .object:before {
+	color: #2e7d32;
+}
+
+/* CHARTIST */
+
+text {
+	font-size: 14px;
+}
+
+.ct-label {
+	color: #333;
+	font-size: 14px;
+}
+
+/* SKELETON grid example */
+
+.example-grid .column, .example-grid .columns {
+	background: #eee none repeat scroll 0 0;
+	border-radius: 4px;
+	font-size: 1rem;
+	font-weight: 600;
+	height: 30px;
+	letter-spacing: 0.1rem;
+	line-height: 30px;
+	margin-bottom: 0.75rem;
+	text-align: center;
+	text-transform: uppercase;
+}
