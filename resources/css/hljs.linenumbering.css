@@ -1,0 +1,36 @@
+pre {
+	position: relative;
+}
+
+code.has-linenumbers {
+	margin-left: 21px;
+}
+
+.numbering {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 6px 2px 6px 0;
+	width: 20px;
+	border: 1px solid #e1e1e1;
+	border-radius: 4px 0 0 4px;
+	background-color: #EEE;
+	text-align: right;
+}
+
+.numbering li {
+	margin: 0;
+	padding: 0;
+}
+
+.numbering li:hover {
+	outline: 1px solid red;
+	background: #7efc7e;
+}
+
+.numbering li:before {
+	content: "";
+	width: 0;
+	height: 0;
+}
