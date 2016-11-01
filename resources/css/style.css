@@ -220,20 +220,27 @@ li {
 	position: relative;
 	list-style-type: none;
 	counter-increment: section;
+	padding-left: 1em;
+	text-indent: -0.1em;
 }
 
 li:before {
+	position: relative;
+	margin-left: -1em;
+	left: -0.5em;
 	color: #C00000;
+}
+
+ul ul li, ol ol li {
+	padding-left: 0;
 }
 
 ul li:before {
 	content: "▸";
-	margin-right: 0.5em;
 }
 
 ol li:before {
 	content: counters(section,".")".";
-	margin-right: 0.5em;
 }
 
 dl {
