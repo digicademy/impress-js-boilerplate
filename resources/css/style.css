@@ -212,7 +212,11 @@ ol, ul {
 	line-height: 1;
 }
 
-ul {
+ol ol, ul ul {
+	margin-left: 10px;
+}
+
+ol {
 	counter-reset: section;
 }
 
@@ -221,18 +225,12 @@ li {
 	list-style-type: none;
 	counter-increment: section;
 	padding-left: 1em;
-	text-indent: -0.1em;
 }
 
 li:before {
-	position: relative;
-	margin-left: -1em;
-	left: -0.5em;
+	position: absolute;
+	left: -0.25em;
 	color: #C00000;
-}
-
-ul ul li, ol ol li {
-	padding-left: 0;
 }
 
 ul li:before {
@@ -241,6 +239,10 @@ ul li:before {
 
 ol li:before {
 	content: counters(section,".")".";
+}
+
+ol ol li {
+	padding-left: 2em;
 }
 
 dl {
@@ -414,6 +416,10 @@ CLASSES FOR SPECIAL LAYOUT/TYPOGRAPHY
 
 .line-height-one {
 	line-height: 1;
+}
+
+.line-height-one-two-five {
+	line-height: 1.25;
 }
 
 .line-height-one-five {
