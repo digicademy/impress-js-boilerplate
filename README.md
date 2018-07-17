@@ -4,12 +4,12 @@
 
 ## Subtitle
 
-### Thomas Kollatz
+### Author
 
 Description
 
-The code of this presentation is at https://github.com/kollatzthomas/
+The code of this boilerplate is at https://github.com/digicademy/impress-js-boilerplate
 
-A live demo can be found at http://digicademy.github.io/#/
+A live demo can be found at http://digicademy.github.io/impress-js-boilerplate/
 
-Released under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/), @kol_t
+Released under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/), @digicademy
