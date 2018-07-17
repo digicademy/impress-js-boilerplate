@@ -1,15 +1,15 @@
-### 2018-05-29 | Wuppertal
+### Date | Place
 
-# epidat – Forschungsplattform zur jüdischen Grabsteinepigraphik
+# Title
 
-## Edition, Kommentierung, Annotation, Visualisierung und Analyse jüdischer Grabmale aus neun Jahrhundert
+## Subtitle
 
 ### Thomas Kollatz
 
 Description
 
-The code of this presentation is at https://github.com/kollatzthomas/20180529_Wuppertal
+The code of this presentation is at https://github.com/kollatzthomas/
 
-A live demo can be found at http://kollatzthomas.github.io/20180529_Wuppertal/
+A live demo can be found at http://digicademy.github.io/#/
 
 Released under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/), @kol_t
