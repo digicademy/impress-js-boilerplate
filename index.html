@@ -1,628 +1,542 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>BKD workshop 01</title>
-        <!-- meta information -->
-        <meta name="author" content="Thomas Kollatz" />
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=1024" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <!-- favicons -->
-        <link rel="shortcut icon" href="resources/img/favicon.png" />
-        <link rel="apple-touch-icon" href="resources/img/apple-touch-icon.png" />
-        <!-- CSS reset and grid -->
-        <link href="vendor/normalize/normalize-4.1.1.css" rel="stylesheet" />
-        <link href="vendor/skeleton/skeleton-2.0.4.css" rel="stylesheet" />
-        <!-- fonts -->
-        <link
-            href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,600italic,400italic,700italic,800,800italic&amp;subset=latin,latin-ext"
-            rel="stylesheet" type="text/css" />
-        <!-- styles for included libraries -->
-        <!-- chartist -->
-        <link rel="stylesheet" href="vendor/chartist/chartist.min-0.9.7.css" />
-        <!-- codemirror -->
-        <link rel="stylesheet" href="vendor/codemirror/lib/codemirror.css" />
-        <!-- highlight -->
-        <link rel="stylesheet" href="vendor/highlight/styles/default.css" />
-        <link rel="stylesheet" href="resources/css/hljs.linenumbering.css" />
-        <!-- magnific popup -->
-        <link rel="stylesheet" href="vendor/magnific-popup/magnific-popup-1.1.0.css" />
-        <!-- standard presentation styles -->
-        <link href="resources/css/style.css" rel="stylesheet" />
-        <!-- custom presentation styles -->
-        <link href="resources/css/custom.css" rel="stylesheet" />
-        <!-- js needed in head -->
-        <!-- greuler -->
-        <script src="vendor/d3/d3-3.5.6.js"></script>
-        <script src="vendor/cola/cola.v3.min.js"></script>
-        <script src="vendor/greuler/greuler-0.5.5.min.js"></script>
-        <!-- html5 dataset shim for IE -->
-        <script src="vendor/impress/html5-dataset.js"></script>
-    </head>
-    <body>
-        <div class="fallback-message">
-            <p>
+<head>
+    <title>TITLE</title>
+
+    <!-- meta information -->
+    <meta name="author" content="Torsten Schrade" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <!-- favicons -->
+    <link rel="shortcut icon" href="resources/img/favicon.png" />
+    <link rel="apple-touch-icon" href="resources/img/apple-touch-icon.png" />
+
+    <!-- CSS reset and grid -->
+    <link href="vendor/normalize/normalize-4.1.1.css" rel="stylesheet" />
+    <link href="vendor/skeleton/skeleton-2.0.4.css" rel="stylesheet" />
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,600italic,400italic,700italic,800,800italic&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+
+    <!-- styles for included libraries -->
+
+    <!-- chartist -->
+    <link rel="stylesheet" href="vendor/chartist/chartist.min-0.9.7.css" />
+
+    <!-- codemirror -->
+    <link rel="stylesheet" href="vendor/codemirror/lib/codemirror.css" />
+
+    <!-- highlight -->
+    <link rel="stylesheet" href="vendor/highlight/styles/default.css" />
+    <link rel="stylesheet" href="resources/css/hljs.linenumbering.css" />
+
+    <!-- magnific popup -->
+    <link rel="stylesheet" href="vendor/magnific-popup/magnific-popup-1.1.0.css" />
+
+    <!-- standard presentation styles -->
+    <link href="resources/css/style.css" rel="stylesheet" />
+
+    <!-- custom presentation styles -->
+    <link href="resources/css/custom.css" rel="stylesheet" />
+
+    <!-- js needed in head -->
+
+    <!-- greuler -->
+    <script src="vendor/d3/d3-3.5.6.js"></script>
+    <script src="vendor/cola/cola.v3.min.js"></script>
+    <script src="vendor/greuler/greuler-0.5.5.min.js"></script>
+
+    <!-- html5 dataset shim for IE -->
+    <script src="vendor/impress/html5-dataset.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+    <div class="fallback-message">
+        <p>
             Your browser <strong>doesn't support the features required</strong> by impress.mod.js,
             so you are presented with a simplified version of this presentation.
         </p>
-            <p>
+        <p>
             For the best experience please use the latest <strong>Chrome</strong>, <strong>Safari</strong>
             or <strong>Firefox</strong> browser.
         </p>
+    </div>
+
+    <div id="impress">
+
+        <div class="step">
+            <h4><strong>Date</strong> | <a href="#">Location</a></h4>
+            <h4><strong>Context</strong></h4>
+
+            <h1 class="down-100">Title</h1>
+
+            <h2 class="red up-25">Subtitle</h2>
+
+            <h4 class="down-100">
+                <strong>Slides:</strong>
+                <a href="#" title="View the presentation online">
+                    Link
+                </a>
+            </h4>
+
+            <h5>
+                <strong><a href="#">Author(s)</a></strong> |
+                <img src="resources/img/Twitter_bird_logo_2012.svg" alt="Twitter" class="twitter-icon" />
+                <a href="https://twitter.com/digicademy" title="Digital Academy on Twitter">@digicademy</a> |
+                <img src="resources/img/Octicons-mark-github.svg" alt="Twitter" class="gh-icon" />
+                <a href="https://github.com/digicademy/" title="Digital Academy on GitHub">digicademy</a> |
+                <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>
+            </h5>
         </div>
-        <div id="impress">
-            <div class="step">
-                <h4><strong>2021-04-28</strong> | <a href="#">ZOOM</a></h4>
-                <h4>
-                    <strong>BKD workshop 01</strong>
-                </h4>
-                <h2 class="down-100">Basis, Metadaten, Volltext</h2>
-                <h3 class="red up-25">Franz Kafka an Martin Buber, 1914</h3>
-                <h5 class="down-100">
-                Slides:
-                <a href="https://digicademy.github.io/BKDWS01"
-                    title="View the presentation online">
-                    https://digicademy.github.io/BKDWS01
-                </a> </h5>
-                <h5> <strong><a href="#">Thomas Kollatz</a></strong> |
-                <img src="resources/img/Twitter_bird_logo_2012.svg" alt="Twitter"
-                    class="twitter-icon" /> <a href="https://twitter.com/digicademy"
-                    title="Digital Academy on Twitter">@digicademy</a> |
-                <img src="resources/img/Octicons-mark-github.svg" alt="Twitter"
-                    class="gh-icon" /> <a href="https://github.com/digicademy/"
-                    title="Digital Academy on GitHub">digicademy</a> |
-                <a href="https://creativecommons.org/licenses/by/4.0/"
-                    >CC-BY 4.0</a> </h5>
-            </div>
-            <div class="step">
-                <h2 class="red">TOC</h2>
-                <ol class="line-height-one-five">
-                    <li>
-                    Kafka an Buber
+
+        <div class="step">
+            <h2>Table of Contents</h2>
+            <ol class="line-height-one-five">
+                <li>
+                    One
                 </li>
-                    <li>
-                    Kategorie C <!--– <code>TeiHeader: CorrespDesc</code> || <code>facsimile</code> --></li>
-                    <!--<li>
-                    Kategorie B – <code>TEIHeader: abstract, keywords, listPerson, …</code> </li>
-                    <li>Kategorie A – <code>text</code></li>-->
-                </ol>
-            </div>
-            <div class="step">
-                <h1 class="red">01</h1>
-                <h2 class="line-height-one-five">
-                Kafka an Buber
-            </h2>
-            </div>
-            <div class="step">
-                <h2 class="red right">Form und Inhalt</h2>
-                <div class="row">
-                    <div class="six columns box" style="height:300px;">
-                        <figure class="mfp-lightbox">
-                            <a href="resources/img/Franz%20Kafka%20an%20MB_008%20344-1.jpg">
-                                <img src="resources/img/Franz%20Kafka%20an%20MB_008%20344-1.jpg"
-                                    alt="Brief_Kafka"  style="width:33rem">
-                            </a>
-                        </figure>
-                    </div>
-                    <div class="six columns substep">
-                        <blockquote class="small down-25">25. V. 14<br />
-                    Verehrter Herr Doktor, Sie waren so freundlich mich für Pfingsten zu einem Besuch einzuladen. Ich bleibe in Berlin von Samstag abend bis Dienstag nachmittag, habe viel mit Familiensachen zu tun, unbedingt gebunden bin ich aber nur für Pfingstmontag vormittag und den Nachmittagsanfang. Ich werde mir erlauben am Pfingsmontag vormittag telephonisch anzufragen, ob und wann Sie verehrter Herr Doktor für mich und meine Braut, die durch Ihre Erzählungen äusserst begierig geworden ist, die Kinder zu sehn, ein Weilchen erübrigen können.<br />
-                    Mit ergebensten Grüssen<br />
-                    Ihr<br />
-                    Franz Kafka</blockquote>
-                    </div>
-                </div>
-                <div class="substep centered">
-                    <a class="button" href="#time" style="background-color:red;color:white;"
-                        >Zeit/Datum</a>
-                    <a class="button" href="#person" style="background-color:green;color:white;"
-                        >Personen</a>
-                    <a class="button" href="#relation" style="background-color:tomato;color:white;"
-                        >Relationen</a>
-                    <a class="button" href="#place" style="background-color:purple;color:white;"
-                        >Ort</a>
-                    <a class="button" href="#event" style="background-color:maroon;color:white;"
-                        >Ereignisse</a>
-                    <a class="button" href="#struktur" style="background-color:silver;color:white;"
-                        >Struktur</a>
-                    <a class="button" href="#basis" style="background-color:black;color:white;"
-                        >Direktionalität</a>
-                </div>
-            </div>
-            <div class="step" id="time">
-                <h2 class="red right">Zeit</h2>
-                <div class="row">
-                    <div class="six columns box" style="height:300px;">
-                        <figure class="mfp-lightbox">
-                            <a href="resources/img/Franz%20Kafka%20an%20MB_008%20344-1.jpg">
-                                <img src="resources/img/Franz%20Kafka%20an%20MB_008%20344-1.jpg"
-                                    alt="Brief_Kafka" style="width:33rem">
-                            </a>
-                        </figure>
-                    </div>
-                    <div class="six columns">
-                        <blockquote class="small down-25"><span class="red">25. V. 14</span><br />
-                    Verehrter Herr Doktor, Sie waren so freundlich mich für <span
-                            class="red"
-                            >Pfingsten</span> zu einem Besuch einzuladen. Ich bleibe in Berlin <span
-                            class="red"
-                            >von Samstag abend bis Dienstag nachmittag</span>, habe viel mit Familiensachen zu tun, unbedingt gebunden bin ich aber nur für <span
-                            class="red"
-                            >Pfingstmontag vormittag und den Nachmittagsanfang</span>. Ich werde mir erlauben am <span
-                            class="red"
-                            >Pfingsmontag vormittag</span> telephonisch anzufragen, ob und wann Sie verehrter Herr Doktor für mich und meine Braut, die durch Ihre Erzählungen äusserst begierig geworden ist, die Kinder zu sehn, ein Weilchen erübrigen können.<br />
-                Mit ergebensten Grüssen<br />
-                Ihr<br />
-                Franz Kafka</blockquote>
-                    </div>
-                </div>
-                <div class="centered">
-                    <a class="button" href="#time" style="background-color:red;color:white;"
-                        >Zeit/Datum</a>
-                    <a class="button" href="#person" style="background-color:green;color:white;"
-                        >Personen</a>
-                    <a class="button" href="#relation" style="background-color:tomato;color:white;"
-                        >Relationen</a>
-                    <a class="button" href="#place" style="background-color:purple;color:white;"
-                        >Ort</a>
-                    <a class="button" href="#event" style="background-color:maroon;color:white;"
-                        >Ereignisse</a>
-                    <a class="button" href="#struktur" style="background-color:silver;color:white;"
-                        >Struktur</a>
-                    <a class="button" href="#basis" style="background-color:black;color:white;"
-                        >Direktionalität</a>
-                </div>
-            </div>
-            <div class="step" id="person">
-                <h2 class="person right">Person</h2>
-                <div class="row">
-                    <div class="six columns box" style="height:300px;">
-                        <figure class="mfp-lightbox">
-                            <a href="resources/img/Franz%20Kafka%20an%20MB_008%20344-1.jpg">
-                                <img src="resources/img/Franz%20Kafka%20an%20MB_008%20344-1.jpg"
-                                    alt="Brief_Kafka" style="width:33rem">
-                            </a>
-                        </figure>
-                    </div>
-                    <div class="six columns">
-                        <blockquote class="small down-25">25. V. 14<br />
-                    Verehrter <span class="person"
-                            >Herr Doktor</span>, Sie waren so freundlich mich für Pfingsten zu einem Besuch einzuladen. Ich bleibe in Berlin von Samstag abend bis Dienstag nachmittag, habe viel mit Familiensachen zu tun, unbedingt gebunden bin ich aber nur für Pfingstmontag vormittag und den Nachmittagsanfang. Ich werde mir erlauben am Pfingsmontag vormittag telephonisch anzufragen, ob und wann Sie verehrter <span
-                            class="person">Herr Doktor</span> für mich und <span class="person"
-                            >meine Braut</span>, die durch Ihre Erzählungen äusserst begierig geworden ist, die <span
-                            class="person"
-                            >Kinder</span> zu sehn, ein Weilchen erübrigen können.<br />
-                    Mit ergebensten Grüssen<br />
-                    Ihr<br /> <span class="person"
-                            >Franz Kafka</span></blockquote>
-                    </div>
-                </div>
-                <div class="centered">
-                    <a class="button" href="#time" style="background-color:red;color:white;"
-                        >Zeit/Datum</a>
-                    <a class="button" href="#person" style="background-color:green;color:white;"
-                        >Personen</a>
-                    <a class="button" href="#relation" style="background-color:tomato;color:white;"
-                        >Relationen</a>
-                    <a class="button" href="#place" style="background-color:purple;color:white;"
-                        >Ort</a>
-                    <a class="button" href="#event" style="background-color:maroon;color:white;"
-                        >Ereignisse</a>
-                    <a class="button" href="#struktur" style="background-color:silver;color:white;"
-                        >Struktur</a>
-                    <a class="button" href="#basis" style="background-color:black;color:white;"
-                        >Direktionalität</a>
-                </div>
-            </div>
-            <!-- Relationen -->
-            <div class="step" id="relation">
-                <h2 class="relation right">Relationen</h2>
-                <div class="row">
-                    <div class="six columns box" style="height:300px;">
-                        <figure class="mfp-lightbox">
-                            <a href="resources/img/Franz%20Kafka%20an%20MB_008%20344-1.jpg">
-                                <img src="resources/img/Franz%20Kafka%20an%20MB_008%20344-1.jpg"
-                                    alt="Brief_Kafka" style="width:33rem">
-                            </a>
-                        </figure>
-                    </div>
-                    <div class="six columns">
-                        <blockquote class="small down-25">25. V. 14<br />
-                Verehrter Herr Doktor, Sie waren so freundlich mich für Pfingsten zu einem Besuch einzuladen. Ich bleibe in Berlin von Samstag abend bis Dienstag nachmittag, habe viel mit <span
-                            class="relation"
-                            >Familiensachen</span> zu tun, unbedingt gebunden bin ich aber nur für Pfingstmontag vormittag und den Nachmittagsanfang. Ich werde mir erlauben am Pfingsmontag vormittag telephonisch anzufragen, ob und wann Sie verehrter Herr Doktor für m<span
-                            class="relation"
-                            >ich und meine Braut</span>, die durch Ihre Erzählungen äusserst begierig geworden ist, die <span
-                            class="relation"
-                            >Kinder</span> zu sehn, ein Weilchen erübrigen können.<br />
-                Mit ergebensten Grüssen<br />
-                Ihr<br />
-                Franz Kafka</blockquote>
-                    </div>
-                </div>
-                <div class="centered">
-                    <a class="button" href="#time" style="background-color:red;color:white;"
-                        >Zeit/Datum</a>
-                    <a class="button" href="#person" style="background-color:green;color:white;"
-                        >Personen</a>
-                    <a class="button" href="#relation" style="background-color:tomato;color:white;"
-                        >Relationen</a>
-                    <a class="button" href="#place" style="background-color:purple;color:white;"
-                        >Ort</a>
-                    <a class="button" href="#event" style="background-color:maroon;color:white;"
-                        >Ereignisse</a>
-                    <a class="button" href="#struktur" style="background-color:silver;color:white;"
-                        >Struktur</a>
-                    <a class="button" href="#basis" style="background-color:black;color:white;"
-                        >Direktionalität</a>
-                </div>
-            </div>
-            <!-- ort -->
-            <div class="step" id="place">
-                <h2 class="place right">Ort</h2>
-                <div class="row">
-                    <div class="six columns box" style="height:300px;">
-                        <figure class="mfp-lightbox">
-                            <a href="resources/img/Franz%20Kafka%20an%20MB_008%20344-1.jpg">
-                                <img src="resources/img/Franz%20Kafka%20an%20MB_008%20344-1.jpg"
-                                    alt="Brief_Kafka" style="width:33rem">
-                            </a>
-                        </figure>
-                    </div>
-                    <div class="six columns">
-                        <blockquote class="small down-25">25. V. 14 <span class="place"
-                            >☐</span><br />
-                    Verehrter Herr Doktor, Sie waren so freundlich mich für Pfingsten zu einem Besuch einzuladen. Ich bleibe in <span
-                            class="place"
-                            >Berlin</span> von Samstag abend bis Dienstag nachmittag, habe viel mit Familiensachen zu tun, unbedingt gebunden bin ich aber nur für Pfingstmontag vormittag und den Nachmittagsanfang. Ich werde mir erlauben am Pfingstmontag vormittag telephonisch anzufragen, ob und wann Sie verehrter Herr Doktor für mich und meine Braut, die durch Ihre Erzählungen äusserst begierig geworden ist, die Kinder zu sehn, ein Weilchen erübrigen können.<br />
-                    Mit ergebensten Grüssen<br />
-                    Ihr<br />
-                    Franz Kafka</blockquote>
-                    </div>
-                </div>
-                <div class="centered">
-                    <a class="button" href="#time" style="background-color:red;color:white;"
-                        >Zeit/Datum</a>
-                    <a class="button" href="#person" style="background-color:green;color:white;"
-                        >Personen</a>
-                    <a class="button" href="#relation" style="background-color:tomato;color:white;"
-                        >Relationen</a>
-                    <a class="button" href="#place" style="background-color:purple;color:white;"
-                        >Ort</a>
-                    <a class="button" href="#event" style="background-color:maroon;color:white;"
-                        >Ereignisse</a>
-                    <a class="button" href="#struktur" style="background-color:silver;color:white;"
-                        >Struktur</a>
-                    <a class="button" href="#basis" style="background-color:black;color:white;"
-                        >Direktionalität</a>
-                </div>
-            </div>
-            <!-- Ereignisse -->
-            <div class="step" id="event">
-                <h2 class="event right">Ereignisse</h2>
-                <div class="row">
-                    <div class="six columns box" style="height:300px;">
-                        <figure class="mfp-lightbox">
-                            <a href="resources/img/Franz%20Kafka%20an%20MB_008%20344-1.jpg">
-                                <img src="resources/img/Franz%20Kafka%20an%20MB_008%20344-1.jpg"
-                                    alt="Brief_Kafka" style="width:33rem">
-                            </a>
-                        </figure>
-                    </div>
-                    <div class="six columns">
-                        <blockquote class="small down-25">25. V. 14<br />
-                    Verehrter Herr Doktor, Sie waren so freundlich mich für Pfingsten zu einem Besuch einzuladen. Ich bleibe in Berlin von Samstag abend bis Dienstag nachmittag, habe viel mit Familiensachen zu tun, unbedingt gebunden bin ich aber nur für Pfingstmontag vormittag und den Nachmittagsanfang. Ich werde mir erlauben am Pfingstmontag vormittag telephonisch anzufragen, ob und wann Sie verehrter Herr Doktor für mich und meine Braut, die durch Ihre Erzählungen äusserst begierig geworden ist, die Kinder zu sehn, ein Weilchen erübrigen können.<br />
-                    Mit ergebensten Grüssen<br />
-                    Ihr<br />
-                    Franz Kafka</blockquote>
-                    </div>
-                </div>
-                <div class="centered">
-                    <a class="button" href="#time" style="background-color:red;color:white;"
-                        >Zeit/Datum</a>
-                    <a class="button" href="#person" style="background-color:green;color:white;"
-                        >Personen</a>
-                    <a class="button" href="#relation" style="background-color:tomato;color:white;"
-                        >Relationen</a>
-                    <a class="button" href="#place" style="background-color:purple;color:white;"
-                        >Ort</a>
-                    <a class="button" href="#event" style="background-color:maroon;color:white;"
-                        >Ereignisse</a>
-                    <a class="button" href="#struktur" style="background-color:silver;color:white;"
-                        >Struktur</a>
-                    <a class="button" href="#basis" style="background-color:black;color:white;"
-                        >Direktionalität</a>
-                </div>
-            </div>
-            <!-- Struktur -->
-            <div class="step" id="struktur">
-                <h2 class="event right">Struktur</h2>
-                <div class="row">
-                    <div class="six columns">
-                        <table class="down-100 medium">
-                            <tr>
-                                <td rowspan="2" class="centered">
-                                    <code>opener</code>
-                                </td>
-                                <td>
-                                    <code>dateline</code>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="left">
-                                    <code>salute</code>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>
-                                    <code>text</code>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td rowspan="2" class="centered">
-                                    <code>closer</code>
-                                </td>
-                                <td>
-                                    <code>salute</code>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <code>signature</code>
-                                </td>
-                            </tr>
-                        </table>
-                        <!--<figure class="mfp-lightbox"><a href="resources/img/Franz%20Kafka%20an%20MB_008%20344-1.jpg"><img src="resources/img/Franz%20Kafka%20an%20MB_008%20344-1.jpg" alt="Brief_Kafka"></a></figure>-->
-                    </div>
-                    <div class="six columns">
-                        <blockquote class="small down-25">25. V. 14<br />
-                    Verehrter Herr Doktor, Sie waren so freundlich mich für Pfingsten zu einem Besuch einzuladen. Ich bleibe in Berlin von Samstag abend bis Dienstag nachmittag, habe viel mit Familiensachen zu tun, unbedingt gebunden bin ich aber nur für Pfingstmontag vormittag und den Nachmittagsanfang. Ich werde mir erlauben am Pfingsmontag vormittag telephonisch anzufragen, ob und wann Sie verehrter Herr Doktor für mich und meine Braut, die durch Ihre Erzählungen äusserst begierig geworden ist, die Kinder zu sehn, ein Weilchen erübrigen können.<br />
-                    Mit ergebensten Grüssen<br />
-                    Ihr<br />
-                    Franz Kafka</blockquote>
-                    </div>
-                </div>
-                <div class="centered">
-                    <a class="button" href="#time" style="background-color:red;color:white;"
-                        >Zeit/Datum</a>
-                    <a class="button" href="#person" style="background-color:green;color:white;"
-                        >Personen</a>
-                    <a class="button" href="#relation" style="background-color:tomato;color:white;"
-                        >Relationen</a>
-                    <a class="button" href="#place" style="background-color:purple;color:white;"
-                        >Ort</a>
-                    <a class="button" href="#event" style="background-color:maroon;color:white;"
-                        >Ereignisse</a>
-                    <a class="button" href="#struktur" style="background-color:silver;color:white;"
-                        >Struktur</a>
-                    <a class="button" href="#basis" style="background-color:black;color:white;"
-                        >Direktionalität</a>
-                </div>
-            </div>
-            <!-- Direktionaltiät -->
-            <div class="step" id="basis">
-                <h2 class="basis right">Direktionalität</h2>
-                <div class="row">
-                    <div class="six columns box" style="height:300px;">
-                        <figure class="mfp-lightbox">
-                            <a href="resources/img/Franz%20Kafka%20an%20MB_008%20344-1.jpg">
-                                <img src="resources/img/Franz%20Kafka%20an%20MB_008%20344-1.jpg"
-                                    alt="Brief_Kafka" style="width:33rem">
-                            </a>
-                        </figure>
-                    </div>
-                    <div class="six columns">
-                        <!--<blockquote class="small down-25">25. V. 14<br/>
-                    Verehrter Herr Doktor, Sie waren so freundlich mich für Pfingsten zu einem Besuch einzuladen. Ich bleibe in Berlin von Samstag abend bis Dienstag nachmittag, habe viel mit Familiensachen zu tun, unbedingt gebunden bin ich aber nur für Pfingstmontag vormittag und den Nachmittagsanfang. Ich werde mir erlauben am Pfingsmontag vormittag telephonisch anzufragen, ob und wann Sie verehrter Herr Doktor für mich und meine Braut, die durch Ihre Erzählungen äusserst begierig geworden ist, die Kinder zu sehn, ein Weilchen erübrigen können.<br/>
-                    Mit ergebensten Grüssen<br/>
-                    Ihr<br/>
-                    Franz Kafka</blockquote>-->
-                        <table class="down-100 even-left">
-                            <tr>
-                                <td>Relation</td>
-                                <td>Kafka</td>
-                                <td>an Buber</td>
-                            </tr>
-                            <tr>
-                                <td>Raum</td>
-                                <td>von ???</td>
-                                <td>nach Berlin</td>
-                            </tr>
-                            <tr>
-                                <td>Zeit</td>
-                                <td colspan="2" class="centered">1914-05-25</td>
-                            </tr>
-                        </table>
-                        <div class="substep">
-                            <h2 class="right">etcetera</h2>
-                            <ul class="small even-left up-10">
-                                <li>Sprache</li>
-                                <li>Objekttyp: Brief | Telegram | Postkarte</li>
-                                <li>handschriftl. | masch.</li>
-                                <li>Umfang</li>
-                                <li>Umschlag</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="centered">
-                    <a class="button" href="#time" style="background-color:red;color:white;"
-                        >Zeit/Datum</a>
-                    <a class="button" href="#person" style="background-color:green;color:white;"
-                        >Personen</a>
-                    <a class="button" href="#relation" style="background-color:tomato;color:white;"
-                        >Relationen</a>
-                    <a class="button" href="#place" style="background-color:purple;color:white;"
-                        >Ort</a>
-                    <a class="button" href="#event" style="background-color:maroon;color:white;"
-                        >Ereignisse</a>
-                    <a class="button" href="#struktur" style="background-color:silver;color:white;"
-                        >Struktur</a>
-                    <a class="button" href="#basis" style="background-color:black;color:white;"
-                        >Direktionalität</a>
-                </div>
-            </div>
-            <div class="step">
-                <h1 class="red">02</h1>
-                <h2 class="line-height-one-five">
-                Kategorie C
-            </h2>
-            </div>
-            <div class="step">
-                <h2 class="red">CorrespDesc #1</h2>
-                <blockquote class="medium"
-                    >The <code>correspDesc</code> element is used within the <code>profileDesc</code> element to provide detailed correspondence-specific metadata, concerning in particular the communicative aspects (sending, receiving, forwarding etc.) associated with an act of correspondence.</blockquote>
-                <pre><code>&lt;correspDesc&gt; 
- &lt;correspAction type="sent"&gt;
-  &lt;persName&gt;Sender&lt;/persName&gt;
-  &lt;placeName&gt;Absendeort&lt;/placeName&gt;
-  &lt;date when="yyyy-mm-dd"/&gt;
- &lt;/correspAction&gt;
- &lt;correspAction type="received"&gt;
-  &lt;persName&gt;Empfänger&lt;/persName&gt;
-  &lt;placeName&gt;Empfangsort&lt;/placeName&gt;
-  &lt;date&gt;unknown&lt;/date&gt;
- &lt;/correspAction&gt;
-&lt;correspDesc&gt; 
-</code></pre></div><div class="step">
-                <h2 class="red centered">Live Demo</h2>
-    <table class="centerd"><tr><td><a href="https://www.oxygenxml.com" target="_blank">Oxygen</a></td> <td>XML Editor</td></tr><tr>
-        <td><a href="https://openrefine.org" target="_blank">OpenRefine</a></td>
-                    <td>OpenRefine is a … tool that allows you to load data, understand it, clean it up, reconcile it, and augment it with data coming from the web.</td>
-                </tr></table>
-            </div>
-            <div class="step">
-                <h2 class="red">CorrespDesc #2</h2>
-                <pre><code >&lt;profileDesc&gt;
- &lt;correspDesc ref="https://bkd.de/id/#"&gt;
-  &lt;correspAction type="sent"&gt;
-   &lt;persName key="P.00010" ref="http://d-nb.info/gnd/118559230"&gt;Franz Kafka&lt;/persName&gt;
-   &lt;placeName key="O.00012" ref="https://www.geonames.org/3067696/" resp="#TK"
- evidence="conjecture"&gt;Prag&lt;/placeName&gt;
-   &lt;date when="1914-05-25"&gt;25.V.14&lt;/date&gt;
-  &lt;/correspAction&gt;
-   &lt;correspAction type="received"&gt;
-   &lt;persName key="P.00001" ref="http://d-nb.info/gnd/118516477"&gt;Martin Buber&lt;/persName&gt;
-   &lt;placeName key="O.00004" ref="https://www.geonames.org/2950159"&gt;Berlin &lt;/placeName&gt;
-  &lt;/correspAction&gt;
- &lt;/correspDesc&gt;
-&lt;/profileDesc&gt;
-</code></pre>
-            </div>
-            <div class="step">
-                <h2 class="red medium"
-                    >Literatur zur Theorie und Praxis Digitaler Briefeditionen</h2>
-                <ul class="line-height-one-five small">
-                    <li>
-                    TEI Guidelines <a
-                        href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD44CD"
-                        target="_blank">Correspondence Description</a> </li>
-                    <li>Trautmann, Marjam: „Abteilungsspezifische Editionsrichtlinien: Abteilung I – STURM-​Briefe“, in: DER STURM. Digitale Quellenedition zur Geschichte der internationalen Avantgarde, erarbeitet und herausgegeben von Marjam Trautmann und Torsten Schrade. Mainz, Akademie der Wissenschaften und der Literatur, Version 2 vom 26. Aug. 2019.
-                        
-                        URI:
-                        <a href="https://sturm-​edition.de/id/S.0000010"
-                        target="_blank">https://sturm-​edition.de/id/S.0000010</a></li>
-                    <li>Peter Stadler, Marcel Illetschko and Sabine Seifert: Towards a Model for Encoding Correspondence in the TEI: Developing and Implementing &lt;correspDesc&gt;
-                       
-                        <a href="https://doi.org/10.4000/jtei.1433"
-                        target="_blank">https://doi.org/10.4000/jtei.1433</a></li>
-                    <li>TEI Special Interest Group <a
-                        href="https://wiki.tei-c.org/index.php/SIG:Correspondence"
-                        >SIG:Correspondence</a></li>
-                    <!--<li><a href="https://github.com/TEI-Correspondence-SIG/CMIF">TEI-Correspondence-SIG/CMIF</a>
-                        
-                        </li>-->
-                    <li><a href="https://doi.org/10.17875/gup2019-1146" target="_blank"
-                        >Reassembling the Republic of Letters in the Digital Age</a>
-                        Standards, Systems, Scholarship
-                        Hotson, Howard; Wallnig, Thomas (eds.)</li>
-                    <li><a href="https://www.zotero.org/groups/2160280/digital_correspondence_projects">Digital Correspondence Projects</a> Zotero Group Library</li>
-                </ul>
-            </div>
-            <div class="step">
-                <h3 class="red">… wird fortgesetzt …</h3>
-            </div>
-            <!--<div class="step">
-                <h2>Charts</h2>
-                <h3 class="red up-25 after-50">With chartist.js</h3>
-                <div class="ct-container">
-                    <div class="ct-chart ct-major-twelfth project-count"></div>
-                </div>
-                <p class="down-25">
-                 Website: <a href="https://gionkunz.github.io/chartist-js/"
-              <div class="step">
-                <h2>Graph models</h2>
-                <h3 class="red up-25 after-25">With greuler.js</h3>
-                <div id="greuler"></div>
-                <script>
-                    'use strict';
-                    greuler({
-                        target: '#greuler',
-                        width: 480,
-                        height: 300,
-                        data: greuler.Graph.random({
-                            order: 5,
-                            size: 5,
-                            connected: true
-                        })
-                    }).update()</script>
-                <p class="down-75">
-                 Website: <a href="https://maurizzzio.github.io/greuler/#/"
-                    >https://maurizzzio.github.io/greuler/#/</a> </p>
-            </div>      >https://gionkunz.github.io/chartist-js/</a> </p>
-            </div>-->
-            <!--<div class="step">
-                <h2>Graph models</h2>
-                <h3 class="red up-25 after-25">With greuler.js</h3>
-                <div id="greuler"></div>
-                <script>
-                    'use strict';
-                    greuler({
-                        target: '#greuler',
-                        width: 480,
-                        height: 300,
-                        data: greuler.Graph.random({
-                            order: 5,
-                            size: 5,
-                            connected: true
-                        })
-                    }).update()</script>
-                <p class="down-75">
-                 Website: <a href="https://maurizzzio.github.io/greuler/#/"
-                    >https://maurizzzio.github.io/greuler/#/</a> </p>
-            </div>-->
+                <li>
+                    Two
+                </li>
+                <li>
+                    Three
+                </li>
+            </ol>
         </div>
-        <!-- jquery -->
-        <script src="vendor/jquery/jquery-1.11.0.min.js"></script>
-        <!-- chartist -->
-        <script src="vendor/chartist/chartist.min-0.9.7.js"></script>
-        <script src="resources/js/chartist.charts.js"></script>
-        <!-- codemirror -->
-        <script src="vendor/codemirror/lib/codemirror.js"></script>
-        <script src="vendor/codemirror/addon/edit/matchbrackets.js"></script>
-        <script src="vendor/codemirror/mode/sparql/sparql.js"></script>
-        <script>
-            var editor = CodeMirror.fromTextArea(document.getElementById("sparql"), {
-                mode: "application/sparql-query",
-                matchBrackets: true,
-                lineNumbers: true,
-                viewportMargin: Infinity
-            });</script>
-        <!-- highlight -->
-        <script src="vendor/highlight/highlight.pack-9.3.0.js"></script>
-        <script>
-            hljs.initHighlightingOnLoad();</script>
-        <script src="resources/js/hljs.linenumbering.js"></script>
-        <!-- magnific popup -->
-        <script src="vendor/magnific-popup/jquery.magnific-popup.min-1.1.0.js"></script>
-        <script src="resources/js/magnific-popup.lightbox.js"></script>
-        <!-- impress.mod.js -->
-        <script src="vendor/impress/impress.fork.js"></script>
-        <script src="vendor/impress/impress-slidenum.js"></script>
-        <script>
-            var obj = impress();
-            obj.init();
-            initSlideNo(obj);</script>
-    </body>
+
+        <div class="step">
+            <h1 class="red">01</h1>
+            <h2 class="line-height-one-five">
+                Basics
+            </h2>
+        </div>
+
+        <div class="step">
+            <h1>Heading (H1)</h1>
+            <h2>Heading (H2)</h2>
+            <h3>Heading (H3)</h3>
+            <h4>Heading (H4)</h4>
+            <h5>Heading (H5)</h5>
+            <h6>Heading (H6)</h6>
+        </div>
+
+        <div class="step">
+            <h2>Text</h2>
+            <h3 class="red up-25 after-25">Standard text styles</h3>
+            <p class="justify">
+               To die or fly to <span class="dotted">dream</span>: ay, <em>that makes calamity of office</em>, and to be: to dread of, and the heart-ache<sup>1</sup>
+               and sweat pith their <span class="outline">currents</span> turns, puzzles <code>the pale cast of outrageous</code> for who would bear, <strong>to be
+               or to sleep</strong> of <del>death</del> <ins>life</ins> what pith and sweat pith <span class="underline">the pangs and arrows</span> of dispriz'd lose ills
+               we have shuffled o'er with a <span class="highlight">bare</span> bourn no <a href="https://en.wikipedia.org/wiki/Mortal_coil">mortal coil</a>. <cite>W.S., Volume<sub>2</sub></cite>
+            </p>
+            <blockquote>
+                Beware the Jabberwock, my son!
+                The jaws that bite, the claws that catch!
+                Beware the Jubjub bird, and shun
+                The frumious Bandersnatch!
+            </blockquote>
+        </div>
+
+        <div class="step">
+            <h2>Text</h2>
+            <h3 class="red up-25 after-25">Text classes (medium, small, x-small)</h3>
+            <h4><strong>medium</strong></h4>
+            <p class="medium up-25">
+               To die or fly to <span class="dotted">dream</span>: ay, <em>that makes calamity of office</em>, and to be: to dread of, and the heart-ache<sup>1</sup>
+               and sweat pith their <span class="outline">currents</span> turns, puzzles <code>the pale cast of outrageous</code> for who would bear, <strong>to be
+               or to sleep</strong> of <del>death</del> <ins>life</ins> what pith and sweat pith <span class="underline">the pangs and arrows</span> of dispriz'd lose ills
+               we have shuffled o'er with a <span class="highlight">bare</span> bourn no <a href="https://en.wikipedia.org/wiki/Mortal_coil">mortal coil</a>. <cite>W.S., Volume<sub>2</sub></cite>
+            </p>
+            <h5><strong>small</strong></h5>
+            <p class="small up-25">
+               To die or fly to <span class="dotted">dream</span>: ay, <em>that makes calamity of office</em>, and to be: to dread of, and the heart-ache<sup>1</sup>
+               and sweat pith their <span class="outline">currents</span> turns, puzzles <code>the pale cast of outrageous</code> for who would bear, <strong>to be
+               or to sleep</strong> of <del>death</del> <ins>life</ins> what pith and sweat pith <span class="underline">the pangs and arrows</span> of dispriz'd lose ills
+               we have shuffled o'er with a <span class="highlight">bare</span> bourn no <a href="https://en.wikipedia.org/wiki/Mortal_coil">mortal coil</a>. <cite>W.S., Volume<sub>2</sub></cite>
+            </p>
+            <h6><strong>x-small</strong></h6>
+            <p class="x-small up-25">
+               To die or fly to <span class="dotted">dream</span>: ay, <em>that makes calamity of office</em>, and to be: to dread of, and the heart-ache<sup>1</sup>
+               and sweat pith their <span class="outline">currents</span> turns, puzzles <code>the pale cast of outrageous</code> for who would bear, <strong>to be
+               or to sleep</strong> of <del>death</del> <ins>life</ins> what pith and sweat pith <span class="underline">the pangs and arrows</span> of dispriz'd lose ills
+               we have shuffled o'er with a <span class="highlight">bare</span> bourn no <a href="https://en.wikipedia.org/wiki/Mortal_coil">mortal coil</a>. <cite>W.S., Volume<sub>2</sub></cite>
+            </p>
+        </div>
+
+        <div class="step">
+            <h2>Lists, Lists, Lists</h2>
+            <h3 class="red up-25 after-25">Definition, unordered, ordered</h3>
+            <div class="row">
+                <div class="four columns">
+                    <dl>
+                        <dt>
+                            Acceleration
+                        </dt>
+                        <dd>
+                            A constant force, acting on a particle of mass m, will produce a constant acceleration a
+                        </dd>
+                        <dt>
+                            Energy
+                        </dt>
+                        <dd>
+                            If we represent kinetic energy by the symbol K, then K = ½ m v²
+                        </dd>
+                    </dl>
+                </div>
+                <div class="four columns">
+                    <h3>Medium</h3>
+                    <ul>
+                        <li>One</li>
+                        <li>Two
+                            <ul>
+                                <li>Two.One</li>
+                                <li>Two.Two</li>
+                            </ul>
+                        </li>
+                        <li>Three</li>
+                    </ul>
+                    <h4>Small</h4>
+                    <ul class="small">
+                        <li>One</li>
+                        <li>Two
+                            <ul>
+                                <li>Two.One</li>
+                                <li>Two.Two</li>
+                            </ul>
+                        </li>
+                        <li>Three</li>
+                    </ul>
+                </div>
+                <div class="four columns">
+                    <h3>Medium</h3>
+                    <ol>
+                        <li>One</li>
+                        <li>Two
+                            <ol>
+                                <li>Two.One</li>
+                                <li>Two.Two</li>
+                            </ol>
+                        </li>
+                        <li>Thre</li>
+                    </ol>
+                    <h4>Small</h4>
+                    <ol class="small">
+                        <li>One</li>
+                        <li>Two
+                            <ol>
+                                <li>Two.One</li>
+                                <li>Two.Two</li>
+                            </ol>
+                        </li>
+                        <li>Thre</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>Tables</h2>
+            <h3 class="red up-25 after-50">Table styles</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>One</th>
+                        <th>Two</th>
+                        <th>Three</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Four</td>
+                        <td>Five</td>
+                        <td>Six</td>
+                    </tr>
+                    <tr>
+                        <td>Seven</td>
+                        <td>Eight</td>
+                        <td>Nine</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="step">
+            <h1 class="red">02</h1>
+            <h2 class="line-height-one-five">
+                Advanced
+            </h2>
+        </div>
+
+        <div class="step">
+            <h2>Slide structure</h2>
+            <h3 class="red up-25 after-50">Twelfe column grid with skeleton.css</h3>
+            <div class="example-grid">
+                <div class="row">
+                    <div class="one column">One</div>
+                    <div class="eleven columns">Eleven</div>
+                </div>
+                <div class="row">
+                    <div class="two columns">Two</div>
+                    <div class="ten columns">Ten</div>
+                </div>
+                <div class="row">
+                    <div class="three columns">Three</div>
+                    <div class="nine columns">Nine</div>
+                </div>
+                <div class="row">
+                    <div class="four columns">Four</div>
+                    <div class="eight columns">Eight</div>
+                </div>
+                <div class="row">
+                    <div class="five columns">Five</div>
+                    <div class="seven columns">Seven</div>
+                </div>
+                <div class="row">
+                    <div class="six columns">Six</div>
+                    <div class="six columns">Six</div>
+                </div>
+                <div class="row">
+                    <div class="seven columns">Seven</div>
+                    <div class="five columns">Five</div>
+                </div>
+                <div class="row">
+                    <div class="eight columns">Eight</div>
+                    <div class="four  columns">Four</div>
+                </div>
+                <div class="row">
+                    <div class="nine columns">Nine</div>
+                    <div class="three columns">Three</div>
+                </div>
+                <div class="row">
+                    <div class="ten columns">Ten</div>
+                    <div class="two columns">Two</div>
+                </div>
+                <div class="row">
+                    <div class="eleven columns">Eleven</div>
+                    <div class="one column">One</div>
+                </div>
+            </div>
+            <p class="down-25">
+                Website: <a href="http://getskeleton.com/">http://getskeleton.com/</a>
+            </p>
+        </div>
+
+        <div class="step">
+            <h2>Substeps</h2>
+            <h3 class="red up-25 after-50">Triggered with class "substep"</h3>
+            <ul class="line-height-one-five">
+                <li class="substep">One</li>
+                <li class="substep">Two</li>
+                <li class="substep">Three</li>
+                <li class="substep">Four</li>
+                <li class="substep">Five</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2>Responsive images</h2>
+            <h3 class="red up-25 after-50">With magnific popup</h3>
+            <div class="mfp-lightbox row">
+                <div class="three columns">
+                    <a href="resources/img/1024x768.png">
+                        <img src="resources/img/1024x768.png" />
+                    </a>
+                </div>
+                <div class="four columns">
+                    <a href="resources/img/1024x768.png">
+                        <img src="resources/img/1024x768.png" />
+                    </a>
+                </div>
+                <div class="five columns">
+                    <a href="resources/img/1024x768.png">
+                        <img src="resources/img/1024x768.png" />
+                    </a>
+                </div>
+            </div>
+            <p class="down-50">
+                Website: <a href="http://dimsemenov.com/plugins/magnific-popup/">http://dimsemenov.com/plugins/magnific-popup/</a>
+            </p>
+        </div>
+
+        <div class="step">
+            <h2>Code listings</h2>
+            <h3 class="red up-25 after-50">With highlight.js (support for most languages)</h3>
+<pre>
+<code class="linenumbers js">function $initHighlight(block, cls) {
+  try {
+    if (cls.search(/\bno\-highlight\b/) != -1)
+      return process(block, true, 0x0F) +
+             ` class="${cls}"`;
+  } catch (e) {
+    /* handle exception */
+  }
+  for (var i = 0 / 2; i < classes.length; i++) {
+    if (checkCondition(classes[i]) === undefined)
+      console.log('undefined');
+  }
+}
+
+export  $initHighlight;
+</code>
+</pre>
+        <p>
+             Website:  <a href="https://highlightjs.org/">https://highlightjs.org/</a>
+        </p>
+        </div>
+
+        <div class="step">
+            <h2>Alternative code listing</h2>
+            <h3 class="red up-25 after-25">With Codemirror (support for even more languages)</h3>
+<form><textarea id="sparql" name="sparql">
+PREFIX rel: &lt;http://purl.org/vocab/relationship/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+
+SELECT DISTINCT ?subject ?subjectLabel ?object ?objectLabel ?predicate
+WHERE {
+    ?subject ?predicate ?object .
+    ?subject (rel:parentOf|^rel:parentOf|rel:spouseOf) ?object .
+    ?subject rdfs:label ?subjectLabel .
+    ?object rdfs:label ?objectLabel .
+    ?subject foaf:gender ?subjectGender .
+    ?object foaf:gender ?objectGender .
+    BIND (IF(?subjectGender = "male"@en, "gold", "yellowgreen") AS ?sourceColor)
+    BIND (IF(?objectGender = "male"@en, "gold", "yellowgreen") AS ?targetColor)
+}
+</textarea></form>
+        <p>
+             Website:  <a href="https://codemirror.net/">https://codemirror.net/</a>
+        </p>
+        </div>
+
+        <div class="step">
+            <h2>Charts</h2>
+            <h3 class="red up-25 after-50">With chartist.js</h3>
+            <div class="ct-container">
+                <div class="ct-chart ct-major-twelfth project-count"></div>
+            </div>
+            <p class="down-25">
+                 Website: <a href="https://gionkunz.github.io/chartist-js/">https://gionkunz.github.io/chartist-js/</a>
+            </p>
+        </div>
+
+        <div class="step">
+            <h2>Graph models</h2>
+            <h3 class="red up-25 after-25">With greuler.js</h3>
+            <div id="greuler"></div>
+            <script>
+                'use strict';
+                greuler({
+                  target: '#greuler',
+                  width: 480,
+                  height: 300,
+                  data: greuler.Graph.random({
+                    order: 5,
+                    size: 5,
+                    connected: true
+                  })
+                }).update()
+            </script>
+            <p class="down-75">
+                 Website: <a href="https://maurizzzio.github.io/greuler/#/">https://maurizzzio.github.io/greuler/#/</a>
+            </p>
+        </div>
+
+        <div class="step">
+            <div class="centered">
+                <h1>F I N I S</h1>
+                <h2>Thank you</h2>
+            </div>
+        </div>
+
+        <div class="step">
+
+            <h2>Literature &amp; Software</h2>
+
+            <h4>Literature</h4>
+
+            <ul class="small">
+                <li>
+                    One
+                </li>
+                <li>
+                    Two
+                </li>
+                <li>
+                    Three
+                </li>
+            </ul>
+
+            <h4>Software</h4>
+
+            <ul class="small">
+                <li>
+                    One
+                </li>
+                <li>
+                   Two
+                </li>
+                <li>
+                    Three
+                </li>
+            </ul>
+
+            <h4>Download</h4>
+            <ul class="small">
+                <li>
+                    <a href="#">
+                        Link to presentation
+                    </a>
+                </li>
+                <li>
+                    License: <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>, Author
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- jquery -->
+    <script src="vendor/jquery/jquery-1.11.0.min.js"></script>
+
+    <!-- chartist -->
+    <script src="vendor/chartist/chartist.min-0.9.7.js"></script>
+    <script src="resources/js/chartist.charts.js"></script>
+
+    <!-- codemirror -->
+    <script src="vendor/codemirror/lib/codemirror.js"></script>
+    <script src="vendor/codemirror/addon/edit/matchbrackets.js"></script>
+    <script src="vendor/codemirror/mode/sparql/sparql.js"></script>
+    <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById("sparql"), {
+            mode: "application/sparql-query",
+            matchBrackets: true,
+            lineNumbers: true,
+            viewportMargin: Infinity
+        });
+    </script>
+
+    <!-- highlight -->
+    <script src="vendor/highlight/highlight.pack-9.3.0.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="resources/js/hljs.linenumbering.js"></script>
+
+    <!-- magnific popup -->
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min-1.1.0.js"></script>
+    <script src="resources/js/magnific-popup.lightbox.js"></script>
+
+    <!-- impress.mod.js -->
+    <script src="vendor/impress/impress.fork.js"></script>
+    <script src="vendor/impress/impress-slidenum.js"></script>
+    <script>
+        var obj = impress();
+        obj.init();
+        initSlideNo(obj);
+    </script>
+
+</body>
 </html>
