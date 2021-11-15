@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Title</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+          <bibl>
+             <extent>
+                <measure unit="Seite" quantity="1"/>
+                <measure unit="Umschlag" quantity="1"/>
+             </extent>
+          </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <correspDesc ref="https://bkd.de/id/#">
+            <correspAction type="sent">
+               <persName key="P.00010" ref="http://d-nb.info/gnd/118559230">Franz Kafka</persName>
+               <placeName key="O.00012" ref="https://www.geonames.org/3067696/" resp="#TK"
+                  evidence="conjecture">Prag</placeName>
+               <date when="1914-05-25">25.V.14</date>
+            </correspAction>
+            <correspAction type="received">
+               <persName key="P.00001" ref="http://d-nb.info/gnd/118516477">Martin Buber</persName>
+               <placeName key="O.00004" ref="https://www.geonames.org/2950159">Berlin </placeName>
+            </correspAction>
+         </correspDesc>
+         <langUsage>
+            <language ident="de">Deutsch</language>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <facsimile>
+      <graphic url="images/KafkaMB.jpg"/>
+   </facsimile>
+  
+</TEI>
