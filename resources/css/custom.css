@@ -1,22 +1,3 @@
-.relation {/* Relationen */
-    color: tomato;
-}
-.event {/* Ereignisse */
-    color: maroon;
-}
-.person {/* personen */
-    color: green;
-}
-.place {/* Ort */
-    color: purple;
-}
-.structure {/* Struktur */
-    color: silver;
-}
-.direction {/* Direktionalität */
-    color: black;
-}
-
 /* box für img  PDF */
 
 .box {
