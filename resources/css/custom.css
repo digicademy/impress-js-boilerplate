@@ -9,3 +9,44 @@
 	left: 0;
 	top: 0;
 }
+
+/* logo and corporate design adjustments */
+#step-1 {
+	background-image: url("../img/logo_grey.png");
+	background-repeat: no-repeat;
+	background-position: right 0;
+	background-size: 3.8em;
+}
+
+#step-1 h1 {
+	margin-right: 1.2em;
+	padding-left: .1em;
+	background-color: #b0d377;
+}
+
+#step-1 h2 {
+	position: relative;
+	z-index: -1;
+	margin-left: 1em;
+	padding-left: .1em;
+	background-color: #e3f0d2;
+}
+
+.step h2:first-child {
+	padding-left: .2em;
+	color: white;
+	background-color: #01315f;
+	background-image: url("../img/logo.png");
+	background-repeat: no-repeat;
+	background-position: right .2em bottom -.2em;
+	background-size: 1.6em;
+}
+
+.step h2:first-child + h3 {
+	position: relative;
+	z-index: -1;
+	margin-right: 4em;
+	padding-left: 1em;
+	background-color: #e3f0d2;
+}
+
