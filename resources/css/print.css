@@ -1,0 +1,146 @@
+@media print {
+  /*
+  #########################################################
+  IMPRESS.JS BASIC STYLES
+  #########################################################
+  */
+
+  @page {
+    size: landscape;
+  }
+
+  body {
+    overflow: initial !important;
+    font-size: 16px;
+    width: 210mm;
+    height: 297mm;
+    print-color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+
+  #impress,
+  .step {
+    position: initial !important;
+    transform: initial !important;
+  }
+
+  .step:not(:first-of-type) {
+    page-break-before: always;
+  }
+
+  .step:not(.active),
+  .substep:not(.active) {
+    opacity: 1;
+  }
+
+  #slide-div {
+    display: none;
+  }
+
+  /*
+  #########################################################
+  BASIC TYPOGRAPHY
+  #########################################################
+  */
+
+  h3 {
+    font-size: 24px
+  }
+
+  h4 {
+    font-size: 20px
+  }
+
+  code {
+    border-width: .5mm;
+  }
+
+  pre code {
+    border-width: 0;
+  }
+
+  /*
+  #########################################################
+  SPECIAL LAYOUT/TYPOGRAPHY
+  #########################################################
+  */
+
+  .medium {
+    font-size: 16px;
+  }
+
+  .small {
+    font-size: 14px;
+  }
+
+  .x-small {
+    font-size: 12px;
+  }
+
+  .outline {
+    outline-width: .5mm;
+  }
+
+  /*
+  #########################################################
+  SKELETON GRID
+  #########################################################
+  */
+
+  .column:not(:first-child), .columns:not(:first-child) {
+    margin-left: 11.2mm;
+  }
+
+  .one.column,
+  .one.columns {
+    width: 13.06666667mm !important;
+  }
+
+  .two.columns {
+    width: 37.33333333mm !important;
+  }
+
+  .three.columns {
+    width: 61, 6mm !important;
+  }
+
+  .four.columns,
+  .one-third.column {
+    max-width: 85.86666667mm !important;
+  }
+
+  .five.columns {
+    width: 110.13333333mm !important;
+  }
+
+  .six.columns,
+  .one-half.column {
+    width: 134.4mm !important;
+  }
+
+  .seven.columns {
+    width: 158.66666667mm !important;
+  }
+
+  .eight.columns,
+  .two-thirds.column {
+    width: 182.93333333mm !important;
+  }
+
+  .nine.columns {
+    width: 207.2mm !important;
+  }
+
+  .ten.columns {
+    width: 231.46666667mm !important;
+  }
+
+  .eleven.columns {
+    width: 255.73333333mm !important;
+  }
+
+  .twelve.columns {
+    width: 280mm !important;
+  }
+
+}

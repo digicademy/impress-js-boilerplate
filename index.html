@@ -18,7 +18,7 @@
     <link href="vendor/skeleton/skeleton-2.0.4.css" rel="stylesheet" />
 
     <!-- fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,600italic,400italic,700italic,800,800italic&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+    <link href="resources/css/fonts.css?family=Open+Sans:400,700,600,600italic,400italic,700italic,800,800italic" rel="stylesheet" type="text/css" />
 
     <!-- styles for included libraries -->
 
@@ -41,12 +41,15 @@
     <!-- custom presentation styles -->
     <link href="resources/css/custom.css" rel="stylesheet" />
 
+    <!-- custom print styles -->
+    <link href="resources/css/print.css" rel="stylesheet" />
+
     <!-- js needed in head -->
 
     <!-- greuler -->
-    <script src="vendor/d3/d3-3.5.6.js"></script>
+    <script src="vendor/d3/d3-6.7.0.min.js"></script>
     <script src="vendor/cola/cola.v3.min.js"></script>
-    <script src="vendor/greuler/greuler-0.5.5.min.js"></script>
+    <script src="vendor/greuler/greuler-1.0.0.min.js"></script>
 
     <!-- html5 dataset shim for IE -->
     <script src="vendor/impress/html5-dataset.js" type="text/javascript"></script>
@@ -84,8 +87,6 @@
 
             <h5>
                 <strong><a href="#">Author(s)</a></strong> |
-                <img src="resources/img/Twitter_bird_logo_2012.svg" alt="Twitter" class="twitter-icon" />
-                <a href="https://twitter.com/digicademy" title="Digital Academy on Twitter">@digicademy</a> |
                 <img src="resources/img/Octicons-mark-github.svg" alt="Twitter" class="gh-icon" />
                 <a href="https://github.com/digicademy/" title="Digital Academy on GitHub">digicademy</a> |
                 <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>
@@ -434,15 +435,29 @@ WHERE {
                   target: '#greuler',
                   width: 480,
                   height: 300,
-                  data: greuler.Graph.random({
-                    order: 5,
-                    size: 5,
-                    connected: true
-                  })
+                  data: {
+                    nodes: [
+                      { id: 0 },
+                      { id: 1 },
+                      { id: 2 },
+                      { id: 3 },
+                      { id: 4 },
+                      { id: 5 }
+                    ],
+                    edges: [
+                      { source: 0, target: 1 },
+                      { source: 0, target: 2, directed: true },
+                      { source: 0, target: 3 },
+                      { source: 1, target: 2, directed: true },
+                      { source: 4, target: 0 },
+                      { source: 5, target: 0, directed: true },
+                      { source: 4, target: 5 }
+                    ]
+                  }
                 }).update()
             </script>
             <p class="down-75">
-                 Website: <a href="https://maurizzzio.github.io/greuler/#/">https://maurizzzio.github.io/greuler/#/</a>
+                 Website: <a href="https://mauriciopoppe.github.io/greuler/#/">https://mauriciopoppe.github.io/greuler/#/</a>
             </p>
         </div>
 
