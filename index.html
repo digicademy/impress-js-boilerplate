@@ -44,9 +44,9 @@
     <!-- js needed in head -->
 
     <!-- greuler -->
-    <script src="vendor/d3/d3-3.5.6.js"></script>
+    <script src="vendor/d3/d3-6.7.0.min.js"></script>
     <script src="vendor/cola/cola.v3.min.js"></script>
-    <script src="vendor/greuler/greuler-0.5.5.min.js"></script>
+    <script src="vendor/greuler/greuler-1.0.0.min.js"></script>
 
     <!-- html5 dataset shim for IE -->
     <script src="vendor/impress/html5-dataset.js" type="text/javascript"></script>
@@ -434,15 +434,29 @@ WHERE {
                   target: '#greuler',
                   width: 480,
                   height: 300,
-                  data: greuler.Graph.random({
-                    order: 5,
-                    size: 5,
-                    connected: true
-                  })
+                  data: {
+                    nodes: [
+                      { id: 0 },
+                      { id: 1 },
+                      { id: 2 },
+                      { id: 3 },
+                      { id: 4 },
+                      { id: 5 }
+                    ],
+                    edges: [
+                      { source: 0, target: 1 },
+                      { source: 0, target: 2, directed: true },
+                      { source: 0, target: 3 },
+                      { source: 1, target: 2, directed: true },
+                      { source: 4, target: 0 },
+                      { source: 5, target: 0, directed: true },
+                      { source: 4, target: 5 }
+                    ]
+                  }
                 }).update()
             </script>
             <p class="down-75">
-                 Website: <a href="https://maurizzzio.github.io/greuler/#/">https://maurizzzio.github.io/greuler/#/</a>
+                 Website: <a href="https://mauriciopoppe.github.io/greuler/#/">https://mauriciopoppe.github.io/greuler/#/</a>
             </p>
         </div>
 
