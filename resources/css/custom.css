@@ -10,39 +10,3 @@
 	top: 0;
 }
 
-/* logo and corporate design adjustments */
-#step-1 .row,
-.step.titular .row {
-	padding: 1em;
-}
-
-.step {
-	min-height: 22em;
-	background-image: url("../img/Logo-grau.svg");
-	background-repeat: no-repeat;
-	background-position: right -4.7em bottom -3.9em;
-}
-
-#step-1 {
-	background-image: none;
-}
-
-.step.toc {
-	background-position: left -3.8em bottom -3.4em;
-	min-height: 15em;
-}
-
-.toc h1 {
-	font-size: 2.6em;
-	margin-bottom: 1em;
-}
-
-.toc ol {
-	margin-left: 8em;
-	column-count: 2;
-}
-
-.toc li {
-	padding-bottom: .25em;
-	border-bottom: .1em var(--dark) solid;
-}
