@@ -9,6 +9,7 @@ IMPRESS.JS BASIC STYLES
 	--secondary: #002672;
 	--light: #fffffe;
 	--dark: #333333;
+	--highlight: #FFEF00;
 }
 
 @font-face {
@@ -170,7 +171,7 @@ BASIC TYPOGRAPHY
 */
 
 h1 {
-	font-size: 1.8em;
+	font-size: 1.6em;
 }
 
 h2 {
@@ -474,9 +475,57 @@ CLASSES FOR SPECIAL LAYOUT/TYPOGRAPHY
 }
 
 .highlight {
-	background: #FFEF00;
+	background: var(--highlight);
 	padding-left: 0.2em;
 	padding-right: 0.2em;
+}
+
+/*
+#########################################################
+STYLES FOR BRANDING
+#########################################################
+*/
+
+#step-1 .row {
+	padding: 1em;
+}
+
+.step {
+	min-height: 26em;
+	min-width: 48em;
+	background-image: url("../img/Logo-grau.svg");
+	background-repeat: no-repeat;
+	background-position: right -4.7em bottom -3.9em;
+	padding: 0 1em;
+}
+
+#step-1 {
+	background-image: none;
+}
+
+#step-1 h1,
+.titular h1 {
+	font-weight: 400;
+}
+
+.step.toc {
+	background-position: left -3.8em bottom -3.4em;
+}
+
+.toc h1 {
+	font-size: 2.6em;
+	font-weight: bolder;
+	margin-bottom: 1em;
+}
+
+.toc ol {
+	margin-left: 8em;
+	column-count: 2;
+}
+
+.toc li {
+	padding-bottom: .25em;
+	border-bottom: .05em var(--dark) solid;
 }
 
 .titular {
@@ -486,6 +535,25 @@ CLASSES FOR SPECIAL LAYOUT/TYPOGRAPHY
 
 .titular a {
 	color: var(--primary);
+}
+
+.branding {
+	background-image: url("../img/Logo-Schrift-schwarz.svg");
+	background-size: 8em;
+	background-repeat: no-repeat;
+	background-position-x: .5em;
+	background-position-y: .5em;
+	border-bottom: .1em var(--dark) solid;
+	min-height: 3.5em;
+}
+
+.titular .branding {
+	background-image: url("../img/Logo-Schrift-weiß.svg");
+	border-bottom-color: var(--light);
+}
+
+.branding .right {
+	padding: 4em 0 0 0;
 }
 
 /*
